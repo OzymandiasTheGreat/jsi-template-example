@@ -1,7 +1,15 @@
+import React, { useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { JSITemplate } from "react-native-jsi-template";
 
 export default function App() {
+  useEffect(() => console.log("GREETING: ", JSITemplate.greeting), []);
+  useEffect(() => console.log("GREET NOARGS: ", JSITemplate.greet()));
+  useEffect(() => console.log("GREET TOMAS: ", JSITemplate.greet("Tomas")));
+  useEffect(() => JSITemplate.greetAsync(undefined, (err, greeting) => console.log("GREETASYNC NOARGS: ", err, greeting)));
+  useEffect(() => JSITemplate.greetAsync("Tomas", (err, greeting) => console.log("GREETASYNC TOMAS: ", err, greeting)));
+
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
