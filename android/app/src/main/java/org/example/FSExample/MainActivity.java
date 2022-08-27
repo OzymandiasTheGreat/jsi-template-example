@@ -1,4 +1,4 @@
-package org.example.JSIExample;
+package org.example.FSExample;
 
 import android.os.Build;
 import android.os.Bundle;

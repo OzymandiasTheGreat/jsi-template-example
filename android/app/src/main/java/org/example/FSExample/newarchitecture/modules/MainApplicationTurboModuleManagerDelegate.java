@@ -1,4 +1,4 @@
-package org.example.JSIExample.newarchitecture.modules;
+package org.example.FSExample.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

@@ -1,4 +1,4 @@
-package org.example.JSIExample.newarchitecture.components;
+package org.example.FSExample.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

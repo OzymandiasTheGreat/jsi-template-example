@@ -25,7 +25,7 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>org.example.JSIExample</string>
+          <string>org.example.FSExample</string>
         </array>
       </dict>
     </array>

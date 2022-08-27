@@ -8,14 +8,16 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@screamingvoid/fs": "^1.0.0alpha0",
+    "b4a": "^1.6.0",
     "expo": "~46.0.9",
+    "expo-file-system": "~14.1.0",
+    "expo-splash-screen": "~0.16.2",
     "expo-status-bar": "~1.4.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
-    "react-native": "0.69.4",
-    "react-native-web": "~0.18.7",
-    "react-native-jsi-template": "*",
-    "expo-splash-screen": "~0.16.2"
+    "react-native": "0.69.5",
+    "react-native-web": "~0.18.7"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

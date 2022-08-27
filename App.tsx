@@ -1,16 +1,20 @@
 import React, { useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { JSITemplate, greetJava, greetObjectiveC } from "react-native-jsi-template";
+import * as fs from "expo-file-system";
+import b4a from "b4a";
+import { FS, greetJava, greetObjectiveC } from "@screamingvoid/fs";
 
 export default function App() {
-  useEffect(() => console.log("GREETING: ", JSITemplate.greeting), []);
-  useEffect(() => console.log("GREET NOARGS: ", JSITemplate.greet()));
-  useEffect(() => console.log("GREET TOMAS: ", JSITemplate.greet("Tomas")));
-  useEffect(() => JSITemplate.greetAsync(undefined, (err, greeting) => console.log("GREETASYNC NOARGS: ", err, greeting)));
-  useEffect(() => JSITemplate.greetAsync("Tomas", (err, greeting) => console.log("GREETASYNC TOMAS: ", err, greeting)));
-  useEffect(() => console.log("GREET JAVA: ", greetJava?.("Tomas")));
-  useEffect(() => console.log("GREET OJECTIVEC: ", greetObjectiveC?.("Tomas")));
+  useEffect(() => {
+    (async () => {
+      const uri = `${fs.documentDirectory}/test.txt`;
+      await fs.writeAsStringAsync(uri, "Hello, World!");
+      const path = uri.slice("file://".length);
+      console.log(path);
+      console.log(b4a.toString(FS.read(path)));
+    })();
+  }, []);
 
   return (
     <View style={styles.container}>
