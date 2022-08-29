@@ -12,6 +12,8 @@ install! 'cocoapods',
 target 'Example' do
   use_expo_modules!
   config = use_native_modules!
+  
+  pod "boost-iosx", :path => '/Users/ozymandias/Projects/boost-iosx/'
 
   use_frameworks! :linkage => podfile_properties['ios.useFrameworks'].to_sym if podfile_properties['ios.useFrameworks']
 
